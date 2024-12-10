@@ -70,7 +70,11 @@
     ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".config/waybar/".source = dotfiles/waybar;
     ".config/wlogout".source = dotfiles/wlogout;
-    ".config/rofi/config.rasi".source = dotfiles/rofi/config.rasi;
+    # ".config/rofi/config.rasi".source = dotfiles/rofi/config.rasi;
+    ".config/rofi/config.rasi".text = (builtins.readFile dotfiles/rofi/config.rasi) + ''
+      @theme "${pkgs.rofi-wayland}/share/rofi/themes/glue_pro_blue.rasi"
+      element-icon { size: 3ch; }
+    '';
     
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

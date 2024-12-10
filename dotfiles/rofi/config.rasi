@@ -154,6 +154,3 @@ configuration {
       sorting-method:    "name";
   }
 }
-
-@theme "/nix/store/xcfia1n9h67jj4wks2kicw6xm1alj0q0-rofi-1.7.5+wayland3/share/rofi/themes/glue_pro_blue.rasi"
-element-icon { size: 3ch; }
