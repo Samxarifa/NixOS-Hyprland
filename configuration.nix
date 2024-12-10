@@ -102,9 +102,18 @@
     github-desktop
     vscode
     htop
+    grim
+    slurp
+    wl-clipboard
 
     xorg.xf86videovmware
   ];
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 
   fonts.packages = with pkgs; [
     font-awesome
