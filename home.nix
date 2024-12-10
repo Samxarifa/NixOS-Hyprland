@@ -70,7 +70,7 @@
     ".config/alacritty/alacritty.toml".source = dotfiles/alacritty.toml;
     ".config/waybar/".source = dotfiles/waybar;
     ".config/wlogout".source = dotfiles/wlogout;
-    ".config/wofi".source = dotfiles/wofi;
+    ".config/rofi/config.rasi".source = dotfiles/rofi/config.rasi;
     
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

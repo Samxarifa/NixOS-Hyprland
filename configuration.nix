@@ -87,7 +87,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     xfce.thunar
-    wofi
+    rofi-wayland
     waybar
     hyprpaper
     dunst
@@ -102,6 +102,8 @@
     github-desktop
     vscode
     htop
+
+    xorg.xf86videovmware
   ];
 
   fonts.packages = with pkgs; [
@@ -112,10 +114,11 @@
 
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   hardware = {
     graphics.enable = true;
-    nvidia.modesetting.enable = true;
+    # nvidia.modesetting.enable = true;
   };
 
   xdg.portal = {
@@ -124,7 +127,9 @@
   };
  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
+  # For VMWare
+  virtualisation.vmware.guest.enable = true;  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
