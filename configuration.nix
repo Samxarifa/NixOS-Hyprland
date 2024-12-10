@@ -99,7 +99,6 @@
     bibata-cursors
     blueberry
     git
-    github-desktop
     vscode
     htop
     grim
