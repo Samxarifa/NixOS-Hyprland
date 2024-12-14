@@ -125,7 +125,11 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
     # nvidia.modesetting.enable = true;
   };
 
